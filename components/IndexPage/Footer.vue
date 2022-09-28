@@ -1,21 +1,21 @@
 <template>
   <footer class="footer">
     <div class="container" style="color: white">
-      <div class="row text-center">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+      <div class="row text-center m-0">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 p-0">
           <h4 class="footer-title">聯絡人</h4>
           <p class="footer-content">
             張老師<br />
             <i class="fas fa-envelope"></i> airace2021@gmail.com
           </p>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 p-0">
           <h4 class="footer-title">主辦單位</h4>
           <p class="footer-content">
             巨量資料研究(PBL)中心<br />人工智慧研究(PBL)中心
           </p>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 p-0">
           <h4 class="footer-title">協辦單位</h4>
           <p class="footer-content">
             教卓中心<br />
