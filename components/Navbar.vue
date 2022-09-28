@@ -16,28 +16,25 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item to="/a">關於競賽</b-nav-item>
+        <b-nav-item :to="{ name: 'index', hash: '#timeline' }"
+          >關於競賽</b-nav-item
+        >
         <b-nav-item to="#">活動規則</b-nav-item>
         <b-nav-item to="#">比賽公告</b-nav-item>
         <b-nav-item to="#">競賽獎項</b-nav-item>
-        <b-nav-item to="#">競賽時程表</b-nav-item>
+        <b-nav-item :to="{ name: 'index', hash: '#timeline' }"
+          >競賽時程表</b-nav-item
+        >
         <b-nav-item to="#">報名流程</b-nav-item>
         <b-nav-item to="#">查看積分</b-nav-item>
-        <b-nav-item to="#">報名</b-nav-item>
-        <b-nav-item to="#">登入</b-nav-item>
+        <b-nav-item to="/auth/login">登入</b-nav-item>
         <!-- <b-nav-item-dropdown text="Lang" right>
           <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
         </b-nav-item-dropdown>
-
-        <b-nav-item-dropdown right>
-          <template #button-content>
-            <em>User</em>
-          </template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+>n-item href="#">Sign Out</b-dropdown-item>
         </b-nav-item-dropdown> -->
       </b-navbar-nav>
     </b-collapse>
@@ -49,6 +46,17 @@ export default {
   name: 'Navbar',
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  mounted() {
+    this.$root.$on('bv::collapse::state', (collapseId, isJustShown) => {
+      if (isJustShown) {
+        document.getElementById('navbar').classList.add('navbar-white')
+      } else if (window.scrollY > 20) {
+        document.getElementById('navbar').classList.add('navbar-white')
+      } else {
+        document.getElementById('navbar').classList.remove('navbar-white')
+      }
+    })
   },
   methods: {
     handleScroll() {
@@ -68,14 +76,18 @@ export default {
   left: 0;
   right: 0;
   z-index: 10000;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: rgba(255, 255, 255, 0);
   transition: all 0.3s ease-in-out;
 }
 
 .navbar-white {
-  position: fixed;
+  box-shadow: 0 0.2rem 1rem rgb(0 0 0 / 15%);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.navbar-open {
   box-shadow: 0 0.2rem 1rem rgb(0 0 0 / 15%);
   background-color: rgba(255, 255, 255, 1);
 }
