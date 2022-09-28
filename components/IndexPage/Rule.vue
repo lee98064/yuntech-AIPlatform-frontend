@@ -70,6 +70,10 @@ export default {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
 
+.rule-group .rule-item:nth-child(1) time {
+  text-align: center;
+}
+
 .rule-item:nth-child(1) {
   background-color: #23829c;
 }
