@@ -20,12 +20,16 @@
           >關於競賽</b-nav-item
         >
         <b-nav-item :to="{ name: 'index', hash: '#rule' }">活動規則</b-nav-item>
-        <b-nav-item to="#">比賽公告</b-nav-item>
-        <b-nav-item to="#">競賽獎項</b-nav-item>
+        <b-nav-item :to="{ name: 'index', hash: '#post' }">比賽公告</b-nav-item>
+        <b-nav-item :to="{ name: 'index', hash: '#reward' }"
+          >競賽獎項</b-nav-item
+        >
         <b-nav-item :to="{ name: 'index', hash: '#timeline' }"
           >競賽時程表</b-nav-item
         >
-        <b-nav-item to="#">報名流程</b-nav-item>
+        <b-nav-item :to="{ name: 'index', hash: '#signupstep' }"
+          >報名流程</b-nav-item
+        >
         <!-- <b-nav-item to="#">查看積分</b-nav-item> -->
         <b-nav-item to="/auth/login">登入</b-nav-item>
         <!-- <b-nav-item-dropdown text="Lang" right>
