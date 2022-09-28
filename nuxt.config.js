@@ -69,7 +69,7 @@ export default {
         const el = await findEl(to.hash)
         if ('scrollBehavior' in document.documentElement.style) {
           return window.scrollTo({
-            top: el.offsetTop,
+            top: el.offsetTop - 100,
             behavior: 'smooth',
           })
         } else {

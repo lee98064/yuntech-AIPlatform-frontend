@@ -2,8 +2,8 @@
   <!--競賽時程表-->
   <section id="timeline">
     <div class="container">
-      <div class="title" style="padding-top: 70px">
-        <h1 class="text-center mb-4">
+      <div class="title">
+        <h1 class="text-center mb-5">
           <b style="vertical-align: middle">競賽時程表</b>
         </h1>
       </div>
@@ -82,6 +82,7 @@ export default {
 
 <style scoped>
 #timeline {
+  padding: 10% 0;
   background-color: #eeeeee;
 }
 .timeline-centered {
@@ -468,5 +469,11 @@ export default {
   margin-bottom: 10px;
   font-family: 'Oswald';
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  #timeline {
+    padding: 40px 0;
+  }
 }
 </style>

@@ -16,17 +16,17 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item :to="{ name: 'index', hash: '#timeline' }"
+        <b-nav-item :to="{ name: 'index', hash: '#about' }"
           >關於競賽</b-nav-item
         >
-        <b-nav-item to="#">活動規則</b-nav-item>
+        <b-nav-item :to="{ name: 'index', hash: '#rule' }">活動規則</b-nav-item>
         <b-nav-item to="#">比賽公告</b-nav-item>
         <b-nav-item to="#">競賽獎項</b-nav-item>
         <b-nav-item :to="{ name: 'index', hash: '#timeline' }"
           >競賽時程表</b-nav-item
         >
         <b-nav-item to="#">報名流程</b-nav-item>
-        <b-nav-item to="#">查看積分</b-nav-item>
+        <!-- <b-nav-item to="#">查看積分</b-nav-item> -->
         <b-nav-item to="/auth/login">登入</b-nav-item>
         <!-- <b-nav-item-dropdown text="Lang" right>
           <b-dropdown-item href="#">EN</b-dropdown-item>
