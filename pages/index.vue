@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Area1 />
+    <Area1 id="area1" />
     <About id="about" />
     <Rule id="rule" />
     <Reward id="reward" />

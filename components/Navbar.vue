@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable="lg" type="light" id="navbar">
-    <b-navbar-brand href="/"
+    <b-navbar-brand :to="{ name: 'index', hash: '#area1' }"
       ><img src="~/static/logo.png" alt="" width="250px"
     /></b-navbar-brand>
 
@@ -31,7 +31,8 @@
           >報名流程</b-nav-item
         >
         <!-- <b-nav-item to="#">查看積分</b-nav-item> -->
-        <b-nav-item to="/auth/login">登入</b-nav-item>
+        <b-nav-item to="/auth/login">報名</b-nav-item>
+        <!-- <b-nav-item to="/auth/login">登入</b-nav-item> -->
         <!-- <b-nav-item-dropdown text="Lang" right>
           <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
