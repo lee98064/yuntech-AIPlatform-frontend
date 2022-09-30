@@ -113,7 +113,7 @@ export default {
       this.$cookie.set('token', res.data.token, {
         expires: inFifteenMinutes,
       })
-      this.$router.push({ name: 'index' })
+      this.$router.push({ name: 'student-page' })
     },
   },
 }

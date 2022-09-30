@@ -31,7 +31,7 @@
           >報名流程</b-nav-item
         >
         <!-- <b-nav-item to="#">查看積分</b-nav-item> -->
-        <b-nav-item to="/auth/login">報名系統</b-nav-item>
+        <b-nav-item to="/student">報名系統</b-nav-item>
         <!-- <b-nav-item to="/auth/login">登入</b-nav-item> -->
         <!-- <b-nav-item-dropdown text="Lang" right>
           <b-dropdown-item href="#">EN</b-dropdown-item>
