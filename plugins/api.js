@@ -1,6 +1,6 @@
 function createApi($axios) {
   return {
-    student: {
+    auth: {
       login(studentID, password) {
         return $axios
           .post('/auth/login', {
@@ -19,6 +19,15 @@ function createApi($axios) {
             password,
             phone,
             lineID,
+          })
+          .then((res) => res)
+          .catch((e) => e)
+      },
+      forget(studentID, email) {
+        return $axios
+          .post('/auth/forget', {
+            studentID,
+            email,
           })
           .then((res) => res)
           .catch((e) => e)
