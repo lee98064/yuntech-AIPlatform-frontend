@@ -58,13 +58,13 @@
                 >
                   註冊
                 </nuxt-link>
-                <button
+                <nuxt-link
                   class="btn btn-lg btn-block btn-primary mb-2"
                   style="background-color: #3b5998"
-                  type="submit"
+                  to="/auth/forget"
                 >
                   忘記密碼
-                </button>
+                </nuxt-link>
               </div>
             </div>
           </b-overlay>
@@ -79,6 +79,11 @@ export default {
   name: 'LoginPage',
   layout: 'auth',
   middleware: 'guest',
+  head() {
+    return {
+      title: '登入',
+    }
+  },
   data() {
     return {
       studentID: '',
@@ -97,7 +102,7 @@ export default {
       }
 
       this.loading = true
-      const res = await this.$api.student.login(this.studentID, this.password)
+      const res = await this.$api.auth.login(this.studentID, this.password)
       if (res instanceof Error) {
         this.showErrorMessage = true
         this.errorMessage = res.response.data.message
