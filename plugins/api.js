@@ -32,6 +32,15 @@ function createApi($axios) {
           .then((res) => res)
           .catch((e) => e)
       },
+      resetPassword(token, password) {
+        return $axios
+          .post('/auth/resetPassword', {
+            token,
+            password,
+          })
+          .then((res) => res)
+          .catch((e) => e)
+      },
       isLogin() {
         return $axios
           .get('/auth/isLogin')
@@ -133,6 +142,24 @@ function createApi($axios) {
             .post('/admin/verify/unpass', {
               studentID,
               reason,
+            })
+            .then((res) => res)
+            .catch((e) => e)
+        },
+      },
+      group: {
+        all() {
+          return $axios
+            .get('/admin/group')
+            .then((res) => res)
+            .catch((e) => e)
+        },
+      },
+      student: {
+        search(keyword) {
+          return $axios
+            .post('/admin/student/search', {
+              keyword,
             })
             .then((res) => res)
             .catch((e) => e)
