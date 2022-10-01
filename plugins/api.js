@@ -39,6 +39,32 @@ function createApi($axios) {
           .catch((e) => e)
       },
     },
+
+    signup: {
+      isInGroup() {
+        return $axios
+          .get('/signUp/isInGroup')
+          .then((res) => res)
+          .catch((e) => e)
+      },
+      createGroup(groupName) {
+        return $axios
+          .post('/signUp/createGroup', {
+            groupName,
+          })
+          .then((res) => res)
+          .catch((e) => e)
+      },
+    },
+
+    user: {
+      group() {
+        return $axios
+          .get('/user/group')
+          .then((res) => res)
+          .catch((e) => e)
+      },
+    },
   }
 }
 
