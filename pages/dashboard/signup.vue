@@ -1,10 +1,10 @@
 <template>
-  <section class="dashboard vh-100" style="background-color: #f7efef">
+  <section class="signup vh-100" style="background-color: #f7efef">
     <div
       class="container d-flex justify-content-center align-items-center h-100 py-5"
     >
       <b-overlay :show="loading" rounded="sm">
-        <div class="card shadow dashboard-card" style="border-radius: 1rem">
+        <div class="card shadow signup-card" style="border-radius: 1rem">
           <div class="card-body p-4" v-if="isInGroup">
             <h1 class="card-title text-center mb-3">{{ group.name }}</h1>
             <h5 class="text-center text-muted">
@@ -17,17 +17,18 @@
               >
             </h5>
             <!-- <h5 class="text-muted">組員名單</h5> -->
-            <hr />
+            <!-- <hr /> -->
             <div class="member-group">
               <div
-                class="member"
+                class="member mb-3"
                 v-for="student in group.Students"
                 :key="student.id"
               >
+                <hr />
                 <div class="row align-items-center">
                   <div class="col-8 col-md-10">
                     <h5 v-if="student.isLeader">頭銜：組長</h5>
-                    <h3 v-else>頭銜：組員</h3>
+                    <h5 v-else>頭銜：組員</h5>
                     <h5>學號：{{ student.studentID }}</h5>
                     <h5>姓名：{{ student.name }}</h5>
                   </div>
@@ -64,7 +65,7 @@
                     placeholder="請輸入隊名"
                     v-model="groupName"
                   />
-                  <small id="emailHelp" class="form-text text-muted"
+                  <small class="form-text text-muted"
                     >*建立後您將成為您建立的小組組長</small
                   >
                 </div>
@@ -86,12 +87,17 @@
                     type="text"
                     class="form-control"
                     placeholder="請輸入加入代碼"
+                    v-model="inviteCode"
                   />
-                  <small id="emailHelp" class="form-text text-muted"
+                  <small class="form-text text-muted"
                     >*須向你們組長索取加入代碼</small
                   >
                 </div>
-                <button type="button" class="btn btn-success ml-auto d-block">
+                <button
+                  type="button"
+                  class="btn btn-success ml-auto d-block"
+                  @click="joinGroup()"
+                >
                   加入組別
                 </button>
               </div>
@@ -128,6 +134,7 @@ export default {
       isInGroup: false,
       group: {},
       groupName: '',
+      inviteCode: '',
       loading: true,
       showErrorMessage: false,
       errorMessage: '',
@@ -155,7 +162,7 @@ export default {
     },
 
     async joinGroup() {
-      const res = await this.$api.signup.group()
+      const res = await this.$api.signup.joinGroup(this.inviteCode)
 
       if (res instanceof Error) {
         this.showErrorMessage = true
@@ -164,7 +171,8 @@ export default {
         return
       }
 
-      this.group = res.data
+      this.getGroupInfo()
+      this.isInGroup = true
     },
 
     async getGroupInfo() {
@@ -184,7 +192,7 @@ export default {
 </script>
 
 <style scoped>
-.dashboard-card {
+.signup-card {
   min-width: 95vw;
 }
 
@@ -200,7 +208,7 @@ export default {
 }
 
 @media (min-width: 768px) {
-  .dashboard-card {
+  .signup-card {
     min-width: 50vw;
   }
 }
