@@ -2,7 +2,13 @@
   <section class="admin-dashboard vh-100" style="background-color: #eeeeee">
     <div class="container py-5">
       <!-- <h1 class="text-center mb-5">報名系統</h1> -->
-      <img src="~/static/logo-student.png" alt="" class="w-100 d-block logo" />
+      <nuxt-link :to="{ name: 'index' }">
+        <img
+          src="~/static/logo-student.png"
+          alt=""
+          class="w-100 d-block logo"
+        />
+      </nuxt-link>
       <div class="admin-function-group">
         <nuxt-link
           :to="{ name: 'admin-verify' }"
@@ -12,14 +18,14 @@
           <h3>資料審核</h3>
         </nuxt-link>
         <nuxt-link
-          :to="{ name: 'admin-teams' }"
+          :to="{ name: 'admin-group' }"
           class="admin-function-item shadow"
         >
           <img src="~/static/upload-student.png" alt="" />
           <h3>查看隊伍</h3>
         </nuxt-link>
         <nuxt-link
-          :to="{ name: 'admin-search' }"
+          :to="{ name: 'admin-student' }"
           class="admin-function-item shadow"
         >
           <img src="~/static/edit.png" alt="" />
