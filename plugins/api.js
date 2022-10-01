@@ -55,12 +55,36 @@ function createApi($axios) {
           .then((res) => res)
           .catch((e) => e)
       },
+      joinGroup(inviteCode) {
+        return $axios
+          .post('/signUp/joinGroup', {
+            inviteCode,
+          })
+          .then((res) => res)
+          .catch((e) => e)
+      },
     },
 
     user: {
+      info() {
+        return $axios
+          .get('/user')
+          .then((res) => res)
+          .catch((e) => e)
+      },
       group() {
         return $axios
           .get('/user/group')
+          .then((res) => res)
+          .catch((e) => e)
+      },
+      upload(formData) {
+        return $axios
+          .post('/user/upload', formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
+          })
           .then((res) => res)
           .catch((e) => e)
       },
