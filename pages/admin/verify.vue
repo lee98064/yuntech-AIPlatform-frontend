@@ -178,11 +178,12 @@ export default {
 
 .fun-btn-group {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
 }
 
 .fun-btn-group button:nth-child(1) {
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 img {

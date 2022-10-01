@@ -1,5 +1,5 @@
 <template>
-  <section class="signup vh-100" style="background-color: #f7efef">
+  <section class="signup" style="background-color: #f7efef">
     <div
       class="container d-flex justify-content-center align-items-center h-100 py-5"
     >
@@ -209,6 +209,9 @@ export default {
 </script>
 
 <style scoped>
+.signup {
+  min-height: 100vh;
+}
 .signup-card {
   min-width: 95vw;
 }

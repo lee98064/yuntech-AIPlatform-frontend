@@ -1,5 +1,5 @@
 <template>
-  <section class="vh-100" style="background-color: #f7efef">
+  <section class="" style="background-color: #f7efef">
     <b-modal id="bv-modal-notice" hide-footer>
       <template #modal-title>註冊成功</template>
       <div class="d-block text-center">
