@@ -1,5 +1,5 @@
 <template>
-  <section class="admin-dashboard vh-100" style="background-color: #eeeeee">
+  <section class="admin-dashboard" style="background-color: #eeeeee">
     <div class="container py-5">
       <!-- <h1 class="text-center mb-5">報名系統</h1> -->
       <nuxt-link :to="{ name: 'index' }">
@@ -14,22 +14,29 @@
           :to="{ name: 'admin-verify' }"
           class="admin-function-item shadow"
         >
-          <img src="~/static/join.png" alt="" />
+          <img src="~/static/verify.png" alt="" />
           <h3>資料審核</h3>
         </nuxt-link>
         <nuxt-link
           :to="{ name: 'admin-group' }"
           class="admin-function-item shadow"
         >
-          <img src="~/static/upload-student.png" alt="" />
+          <img src="~/static/man.png" alt="" />
           <h3>查看隊伍</h3>
         </nuxt-link>
         <nuxt-link
           :to="{ name: 'admin-student' }"
           class="admin-function-item shadow"
         >
-          <img src="~/static/edit.png" alt="" />
+          <img src="~/static/searching.png" alt="" />
           <h3>查詢學生</h3>
+        </nuxt-link>
+        <nuxt-link
+          :to="{ name: 'admin-post' }"
+          class="admin-function-item shadow"
+        >
+          <img src="~/static/edit.png" alt="" />
+          <h3>公告管理</h3>
         </nuxt-link>
         <button class="btn admin-function-item shadow" @click="logout()">
           <img src="~/static/logout.png" alt="" />
@@ -65,6 +72,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .admin-function-group {
@@ -72,7 +80,7 @@ export default {
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: repeat(3, 200px);
   height: 100%;
   grid-gap: 15px;
 }
@@ -107,7 +115,7 @@ export default {
 
 @media (min-width: 768px) {
   .admin-function-group {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(1, 250px);
   }
 
