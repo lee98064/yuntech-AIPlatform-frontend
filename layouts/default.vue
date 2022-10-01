@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 * {
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 600;
