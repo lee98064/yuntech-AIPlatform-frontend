@@ -20,7 +20,7 @@
           >關於競賽</b-nav-item
         >
         <b-nav-item :to="{ name: 'index', hash: '#rule' }">活動規則</b-nav-item>
-        <b-nav-item :to="{ name: 'index', hash: '#post' }">比賽公告</b-nav-item>
+        <b-nav-item :to="{ name: 'posts' }">比賽公告</b-nav-item>
         <b-nav-item :to="{ name: 'index', hash: '#reward' }"
           >競賽獎項</b-nav-item
         >
