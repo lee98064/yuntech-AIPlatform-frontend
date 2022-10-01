@@ -10,14 +10,14 @@
           <div class="signUpStep-icon">
             <img class="mb-3" src="~/static/signup.png" alt="" />
           </div>
-          <h4 class="mb-3 text-center">組長填寫報名表</h4>
+          <h4 class="mb-3 text-center">組長建立小隊</h4>
         </div>
         <div class="signUpStep-item shadow">
           <div class="signUpStep-step">2</div>
           <div class="signUpStep-icon">
             <img class="mb-3" src="~/static/gmail.png" alt="" />
           </div>
-          <h4 class="mb-3 text-center">組員收到信後註冊</h4>
+          <h4 class="mb-3 text-center">組員用邀請碼註冊</h4>
         </div>
         <div class="signUpStep-item shadow">
           <div class="signUpStep-step">3</div>
