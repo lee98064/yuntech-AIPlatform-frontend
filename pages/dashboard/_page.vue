@@ -18,10 +18,13 @@
           <img src="~/static/upload-student.png" alt="" />
           <h3>上傳學生證</h3>
         </nuxt-link>
-        <div class="student-function-item shadow">
+        <nuxt-link
+          :to="{ name: 'dashboard-edit' }"
+          class="student-function-item shadow"
+        >
           <img src="~/static/edit.png" alt="" />
           <h3>修改資料</h3>
-        </div>
+        </nuxt-link>
         <button class="btn student-function-item shadow" @click="logout()">
           <img src="~/static/logout.png" alt="" />
           <h3>登出</h3>
