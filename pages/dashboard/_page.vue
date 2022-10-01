@@ -11,18 +11,21 @@
           <img src="~/static/join.png" alt="" />
           <h3>報名</h3>
         </nuxt-link>
-        <div class="student-function-item shadow">
+        <nuxt-link
+          :to="{ name: 'dashboard-upload' }"
+          class="student-function-item shadow"
+        >
           <img src="~/static/upload-student.png" alt="" />
           <h3>上傳學生證</h3>
-        </div>
+        </nuxt-link>
         <div class="student-function-item shadow">
           <img src="~/static/edit.png" alt="" />
           <h3>修改資料</h3>
         </div>
-        <div class="student-function-item shadow">
-          <img src="~/static/personal-information.png" alt="" />
-          <h3>顯示資料</h3>
-        </div>
+        <button class="btn student-function-item shadow" @click="logout()">
+          <img src="~/static/logout.png" alt="" />
+          <h3>登出</h3>
+        </button>
       </div>
     </div>
   </section>
@@ -34,6 +37,12 @@ export default {
   layout: 'student',
   middleware: 'auth',
   setup() {},
+  methods: {
+    logout() {
+      this.$cookie.remove('token')
+      this.$router.push({ name: 'index' })
+    },
+  },
 }
 </script>
 
