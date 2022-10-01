@@ -66,7 +66,7 @@
                     v-model="groupName"
                   />
                   <small class="form-text text-muted"
-                    >*建立後您將成為您建立的小組組長</small
+                    >*建立後您將成為您建立的小隊組長</small
                   >
                 </div>
                 <button
@@ -86,11 +86,11 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="請輸入加入代碼"
+                    placeholder="請輸入邀請碼"
                     v-model="inviteCode"
                   />
                   <small class="form-text text-muted"
-                    >*須向你們組長索取加入代碼</small
+                    >*須向你們組長索取邀請碼</small
                   >
                 </div>
                 <button
@@ -148,6 +148,12 @@ export default {
         return
       }
 
+      if (
+        !confirm('確定要建立小隊？\n建立後無法刪除，您也將無法加入其他隊伍！')
+      ) {
+        return
+      }
+
       const res = await this.$api.signup.createGroup(this.groupName)
 
       if (res instanceof Error) {
@@ -162,6 +168,17 @@ export default {
     },
 
     async joinGroup() {
+      if (this.inviteCode == '') {
+        this.showErrorMessage = true
+        this.errorMessage = '請輸入邀請碼！'
+        return
+      }
+      if (
+        !confirm('確定要加入小隊？\n加入後無法退出，您也將無法加入其他隊伍！')
+      ) {
+        return
+      }
+
       const res = await this.$api.signup.joinGroup(this.inviteCode)
 
       if (res instanceof Error) {
