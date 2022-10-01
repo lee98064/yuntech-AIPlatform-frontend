@@ -8,7 +8,7 @@
       提升雲科大學生對人工智慧之認識，並鼓勵更多學生進入人工智慧領域。
       透過此次的競賽，熟悉目前業界廣泛運用的雲端運算平台服務，人工智慧與自駕車的應用相關技術。
     </p>
-    <nuxt-link class="btn btn-primary" :to="{ name: 'index', hash: '#about' }">
+    <nuxt-link class="btn btn-primary" :to="{ name: 'dashboard-page' }">
       報名競賽
     </nuxt-link>
   </div>
