@@ -5,7 +5,7 @@
       <img src="~/static/logo-student.png" alt="" class="w-100 d-block logo" />
       <div class="student-function-group">
         <nuxt-link
-          :to="{ name: 'student-signup' }"
+          :to="{ name: 'dashboard-signup' }"
           class="student-function-item shadow"
         >
           <img src="~/static/join.png" alt="" />
