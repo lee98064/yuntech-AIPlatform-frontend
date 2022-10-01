@@ -88,6 +88,56 @@ function createApi($axios) {
           .then((res) => res)
           .catch((e) => e)
       },
+      edit(student) {
+        return $axios
+          .patch('/user/edit', { ...student })
+          .then((res) => res)
+          .catch((e) => e)
+      },
+    },
+    admin: {
+      auth: {
+        login(account, password) {
+          return $axios
+            .post('/admin/auth/login', {
+              account,
+              password,
+            })
+            .then((res) => res)
+            .catch((e) => e)
+        },
+        isLogin() {
+          return $axios
+            .get('/admin/auth/isLogin')
+            .then((res) => res)
+            .catch((e) => e)
+        },
+      },
+      verify: {
+        all() {
+          return $axios
+            .get('/admin/verify')
+            .then((res) => res)
+            .catch((e) => e)
+        },
+        pass(studentID) {
+          return $axios
+            .post('/admin/verify/pass', {
+              studentID,
+            })
+            .then((res) => res)
+            .catch((e) => e)
+        },
+        unpass(studentID, reason) {
+          return $axios
+            .post('/admin/verify/unpass', {
+              studentID,
+              reason,
+            })
+            .then((res) => res)
+            .catch((e) => e)
+        },
+      },
     },
   }
 }
