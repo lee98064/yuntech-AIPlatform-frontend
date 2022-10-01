@@ -2,7 +2,13 @@
   <section class="student-dashboard vh-100" style="background-color: #f7efef">
     <div class="container py-5">
       <!-- <h1 class="text-center mb-5">報名系統</h1> -->
-      <img src="~/static/logo-student.png" alt="" class="w-100 d-block logo" />
+      <nuxt-link :to="{ name: 'index' }">
+        <img
+          src="~/static/logo-student.png"
+          alt=""
+          class="w-100 d-block logo"
+        />
+      </nuxt-link>
       <div class="student-function-group">
         <nuxt-link
           :to="{ name: 'dashboard-signup' }"
