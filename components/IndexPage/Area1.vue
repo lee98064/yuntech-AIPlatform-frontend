@@ -37,7 +37,7 @@ export default {
 
 .area1 h1 {
   color: #374daa;
-  font-size: 55px;
+  font-size: 50px;
   text-align: center;
 }
 
