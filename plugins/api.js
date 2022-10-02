@@ -178,6 +178,56 @@ function createApi($axios) {
             .catch((e) => e)
         },
       },
+      post: {
+        all() {
+          return $axios
+            .get('/admin/posts')
+            .then((res) => res)
+            .catch((e) => e)
+        },
+        get(id) {
+          return $axios
+            .get(`/admin/posts/${id}`)
+            .then((res) => res)
+            .catch((e) => e)
+        },
+        hide(id) {
+          return $axios
+            .patch(`/admin/posts/${id}/hide`)
+            .then((res) => res)
+            .catch((e) => e)
+        },
+        show(id) {
+          return $axios
+            .patch(`/admin/posts/${id}/show`)
+            .then((res) => res)
+            .catch((e) => e)
+        },
+        create(title, content) {
+          return $axios
+            .post(`/admin/posts`, {
+              title,
+              content,
+            })
+            .then((res) => res)
+            .catch((e) => e)
+        },
+        edit(id, title, content) {
+          return $axios
+            .patch(`/admin/posts/${id}`, {
+              title,
+              content,
+            })
+            .then((res) => res)
+            .catch((e) => e)
+        },
+        delete(id) {
+          return $axios
+            .delete(`/admin/posts/${id}`)
+            .then((res) => res)
+            .catch((e) => e)
+        },
+      },
     },
   }
 }
