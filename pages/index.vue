@@ -6,7 +6,6 @@
     <Reward id="reward" />
     <TimeLine id="timeline" />
     <SignUpStep id="signupstep" />
-    <Footer id="footer" />
   </div>
 </template>
 
@@ -15,7 +14,6 @@ import Area1 from '~/components/IndexPage/Area1.vue'
 import TimeLine from '../components/IndexPage/TimeLine.vue'
 import About from '~/components/IndexPage/About.vue'
 import Rule from '~/components/IndexPage/Rule.vue'
-import Footer from '~/components/IndexPage/Footer.vue'
 import Reward from '~/components/IndexPage/Reward.vue'
 import SignUpStep from '~/components/IndexPage/SignUpStep.vue'
 export default {
@@ -26,7 +24,6 @@ export default {
     TimeLine,
     About,
     Rule,
-    Footer,
     Reward,
     SignUpStep,
   },
