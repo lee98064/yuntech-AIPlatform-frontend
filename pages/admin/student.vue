@@ -17,6 +17,7 @@
                     :src="getImg(student.id)"
                     class="d-block m-auto"
                     alt=""
+                    style="max-height: 40vh; max-width: 100%"
                   />
                 </div>
                 <div class="col-12">
