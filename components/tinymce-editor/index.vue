@@ -1,12 +1,13 @@
 <template>
-  <client-only>
+  <no-ssr>
     <editor
       id="tinymce"
       v-model="myValue"
       :init="init"
       :disabled="disabled"
+      ref="tinymce"
     ></editor>
-  </client-only>
+  </no-ssr>
 </template>
 
 <script>
@@ -64,10 +65,8 @@ export default {
 
     toolbar: {
       type: [String, Array],
-      default: [
-        'undo redo | styleselect | bold italic | alignleft aligncenter alignright | link image table',
-        'cut copy paste| forecolor backcolor | charmap emoticons',
-      ],
+      default:
+        'undo redo | styleselect | bold italic | alignleft aligncenter alignright | link image table cut copy paste| forecolor backcolor | charmap emoticons',
       // default:
       //   'undo  redo  |  formatselect  |  bold  italic  hr  |  alignleft  aligncenter  alignright  alignjustify  |  bullist  numlist  outdent  indent  table  |  removeformat  preview',
     },
@@ -92,6 +91,7 @@ export default {
         menubar: false,
         // 拼写检查
         browser_spellcheck: true,
+        bindEvents: false,
         // 去水印
         branding: false,
         statusbar: false, // 隐藏编辑器底部的状态栏
@@ -105,6 +105,7 @@ export default {
         },
       },
       myValue: this.value,
+      isClose: this.close,
     }
   },
 
@@ -128,8 +129,11 @@ export default {
 
     this.$nextTick(() => {
       if (process.client) {
-        window.tinymce.init({})
+        window.tinymce.init({
+          selector: '#tinymce',
+        })
       }
+      console.log('asddsdad')
     })
   },
 
@@ -141,6 +145,7 @@ export default {
       this.$emit('input', newValue)
     },
   },
+  beforeDestroy() {},
 }
 </script>
 
