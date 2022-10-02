@@ -70,7 +70,7 @@ export default {
 img {
   display: block;
   margin: auto;
-  max-width: 400px;
+  max-width: 300px;
 }
 
 @media (min-width: 768px) {
