@@ -52,15 +52,14 @@
                 <hr class="my-4" />
 
                 <nuxt-link
-                  class="btn btn-lg btn-block btn-primary"
-                  style="background-color: #dd4b39"
+                  class="btn btn-lg btn-block btn-danger"
                   to="/auth/register"
                 >
                   註冊
                 </nuxt-link>
                 <nuxt-link
-                  class="btn btn-lg btn-block btn-primary mb-2"
-                  style="background-color: #3b5998"
+                  class="btn btn-lg btn-block btn-info mb-2"
+                  style="background-color: #3b5998; border: #3b5998"
                   to="/auth/forget"
                 >
                   忘記密碼

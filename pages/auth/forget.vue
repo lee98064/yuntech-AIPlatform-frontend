@@ -58,7 +58,7 @@
 
                 <hr class="my-4" />
                 <nuxt-link
-                  class="btn btn-lg btn-block btn-primary mb-2"
+                  class="btn btn-lg btn-block btn-info mb-2"
                   style="background-color: #3b5998"
                   to="/auth/login"
                 >
