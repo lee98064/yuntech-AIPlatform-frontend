@@ -15,7 +15,7 @@
           class="student-function-item shadow"
         >
           <img src="~/static/join.png" alt="" />
-          <h3>報名</h3>
+          <h3>報名/查看小隊</h3>
         </nuxt-link>
         <nuxt-link
           :to="{ name: 'dashboard-upload' }"

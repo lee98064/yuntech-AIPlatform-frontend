@@ -7,6 +7,9 @@
         <div class="card shadow group-card" style="border-radius: 1rem">
           <div class="card-body p-4">
             <h1 class="card-title text-center mb-3">所有隊伍</h1>
+            <button class="btn btn-sm btn-success download" @click="download()">
+              匯出報名名單
+            </button>
             <b-alert v-model="showErrorMessage" variant="danger" dismissible>
               {{ errorMessage }}
             </b-alert>
@@ -107,6 +110,9 @@ export default {
       this.groups = res.data
       this.loading = false
     },
+    download() {
+      window.open('/api/admin/export')
+    },
   },
 }
 </script>
@@ -117,6 +123,7 @@ export default {
 }
 
 .group-card {
+  position: relative;
   min-width: 90vw;
 }
 
@@ -126,6 +133,12 @@ export default {
 
 .student-group .student:last-child hr {
   display: none;
+}
+
+.download {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
 }
 
 @media (min-width: 768px) {
