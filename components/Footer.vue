@@ -6,14 +6,14 @@
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Links -->
-      <section class="">
+      <section class="footer">
         <!--Grid row-->
         <div class="row">
           <!-- Grid column -->
           <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
             <h3 class="text-uppercase mb-4 font-weight-bold">聯絡人</h3>
             <h4>張老師</h4>
-            <p>airace2021@gmail.com</p>
+            <p>changart@yuntech.edu.tw</p>
           </div>
           <!-- Grid column -->
 
@@ -23,10 +23,28 @@
           <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
             <h3 class="text-uppercase mb-4 font-weight-bold">主辦單位</h3>
             <p>
-              <a class="text-white">巨量資料研究(PBL)中心</a>
+              <a
+                href="https://bdrc.yuntech.edu.tw/"
+                target="_blank"
+                class="text-white"
+                >巨量資料研究(PBL)中心</a
+              >
             </p>
             <p>
-              <a class="text-white">人工智慧研究(PBL)中心</a>
+              <a
+                href="https://bpis.yuntech.edu.tw/"
+                target="_blank"
+                class="text-white"
+                >前瞻學士學位學程</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://www.mis.yuntech.edu.tw/"
+                target="_blank"
+                class="text-white"
+                >資訊管理系</a
+              >
             </p>
           </div>
           <!-- Grid column -->
@@ -37,7 +55,12 @@
           <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
             <h3 class="text-uppercase mb-4 font-weight-bold">協辦單位</h3>
             <p>
-              <a class="text-white">教卓中心</a>
+              <a
+                href="https://platform.tex.yuntech.edu.tw/"
+                target="_blank"
+                class="text-white"
+                >教卓中心</a
+              >
             </p>
             <p>
               <a class="text-white">本活動由教育部高等教育深耕計畫經費補助</a>
@@ -80,6 +103,10 @@ export default {
 </script>
 
 <style scoped>
+.footer a {
+  cursor: pointer;
+}
+
 /* .footer {
   background-color: #343a40;
 }

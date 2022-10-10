@@ -11,7 +11,7 @@
         <div class="timeline-centered timeline-sm">
           <article class="timeline-entry">
             <div class="timeline-entry-inner">
-              <time class="timeline-time"><span>9/29</span><span></span></time>
+              <time class="timeline-time"><span>10/11</span><span></span></time>
               <div class="timeline-icon bg-violet"></div>
               <div class="timeline-label bg-violet">
                 <h4 class="timeline-title">公布訊息、開始報名</h4>
@@ -20,48 +20,46 @@
           </article>
           <article class="timeline-entry left-aligned">
             <div class="timeline-entry-inner">
-              <time class="timeline-time"><span>10/6</span><span></span></time>
+              <time class="timeline-time"><span>10/21</span><span></span></time>
               <div class="timeline-icon bg-blue"></div>
               <div class="timeline-label bg-blue">
-                <h4 class="timeline-title">AWS 主題演講</h4>
-              </div>
-            </div>
-          </article>
-          <article class="timeline-entry">
-            <div class="timeline-entry-inner">
-              <time class="timeline-time"><span>10/15</span><span></span></time>
-              <div class="timeline-icon bg-light1"></div>
-              <div class="timeline-label bg-light1">
-                <h4 class="timeline-title">
-                  AWS雲端服務平台、Deep Racer 戰略分享會
-                </h4>
-              </div>
-            </div>
-          </article>
-          <article class="timeline-entry left-aligned">
-            <div class="timeline-entry-inner">
-              <time class="timeline-time"><span>10/31</span><span></span></time>
-              <div class="timeline-icon bg-orange"></div>
-              <div class="timeline-label bg-orange">
                 <h4 class="timeline-title">截止報名</h4>
               </div>
             </div>
           </article>
           <article class="timeline-entry">
             <div class="timeline-entry-inner">
-              <time class="timeline-time"><span>11/17</span><span></span></time>
-              <div class="timeline-icon bg-yellow"></div>
-              <div class="timeline-label bg-yellow">
-                <h4 class="timeline-title">積分賽(1/2)</h4>
+              <time class="timeline-time"><span>10/26</span><span></span></time>
+              <div class="timeline-icon bg-light1"></div>
+              <div class="timeline-label bg-light1">
+                <h4 class="timeline-title">暖身賽（不列入總成績）</h4>
               </div>
             </div>
           </article>
           <article class="timeline-entry left-aligned">
             <div class="timeline-entry-inner">
-              <time class="timeline-time"><span>11/24</span><span></span></time>
+              <time class="timeline-time"><span>11/02</span><span></span></time>
+              <div class="timeline-icon bg-orange"></div>
+              <div class="timeline-label bg-orange">
+                <h4 class="timeline-title">第一輪積分賽</h4>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <time class="timeline-time"><span>11/09</span><span></span></time>
+              <div class="timeline-icon bg-yellow"></div>
+              <div class="timeline-label bg-yellow">
+                <h4 class="timeline-title">第二輪積分賽</h4>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-entry left-aligned">
+            <div class="timeline-entry-inner">
+              <time class="timeline-time"><span>待定</span><span></span></time>
               <div class="timeline-icon bg-pink"></div>
               <div class="timeline-label bg-pink">
-                <h4 class="timeline-title">積分賽(2/2)、公布名次及頒獎</h4>
+                <h4 class="timeline-title">公布名次及頒獎</h4>
               </div>
             </div>
           </article>

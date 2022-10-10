@@ -9,8 +9,8 @@
           <img class="mb-3" src="~/static/time.png" alt="" />
           <h1 class="mb-3">報名期間</h1>
           <time
-            >民國110年9月29日 <br />
-            至 <br />民國110年10月31日</time
+            >民國111年10月11日 <br />
+            至 <br />民國111年10月26日</time
           >
         </div>
         <div class="rule-item">
