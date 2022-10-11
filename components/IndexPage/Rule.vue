@@ -10,7 +10,7 @@
           <h1 class="mb-3">報名期間</h1>
           <time
             >民國111年10月11日 <br />
-            至 <br />民國111年10月21日</time
+            至 <br />民國111年10月25日</time
           >
         </div>
         <div class="rule-item">

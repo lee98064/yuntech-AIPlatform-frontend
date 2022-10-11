@@ -20,7 +20,7 @@
           </article>
           <article class="timeline-entry left-aligned">
             <div class="timeline-entry-inner">
-              <time class="timeline-time"><span>10/21</span><span></span></time>
+              <time class="timeline-time"><span>10/25</span><span></span></time>
               <div class="timeline-icon bg-blue"></div>
               <div class="timeline-label bg-blue">
                 <h4 class="timeline-title">截止報名</h4>
